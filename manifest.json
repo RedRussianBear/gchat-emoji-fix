@@ -1,0 +1,19 @@
+{
+  "name": "Gmail GChat Emoji Fix",
+  "version": "1.0",
+  "description": "Reverting the emoji in gchat to not look like trash",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://hangouts.google.com/*",
+        "https://mail.google.com/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
